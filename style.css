@@ -1,0 +1,497 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0; 
+    padding: 0;
+    color: #333;
+    min-height: 100vh;
+}
+
+.slideshow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slides-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transition: transform 1.5s ease-in-out;
+}
+
+.slide {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+#slide1 {
+    background-image: url("/Pictures/Kenshiro_Background_1.jpg");
+}
+
+#slide2 {
+    background-image: url("/Pictures/Kenshiro_Background_2.jpg");
+}
+
+#slide3 {
+    background-image: url("/Pictures/Kenshiro_Background_3.jpg");
+}
+
+header {
+    background: #222;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color:#e10600;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav a{
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover{
+    color: #e10600;
+}
+
+.hero {
+    text-align: center;
+    padding: 90px 20px;
+    background-blend-mode: normal;
+    background-color: rgba(34,34,34,0.6);
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #ddd;
+}
+
+.hero .btn {
+    background: #e10600;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero .btn:hover {
+    background: #b00000;
+}
+
+.why-join h2 {
+    color:#222;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.feature {
+    width: 30%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.feature:hover {
+    transform: scale(1.04);
+}
+
+.feature h3 {
+    color: #e10600;
+}
+
+.feature p {
+    color: #555;
+}
+
+.feature img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.form-section {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0px 4px 16px rgba(0,0,0,0.08);
+}
+
+.form-section h2 {
+    margin-bottom: 20px;
+    color: #c00;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+label {
+    margin: 5px 0;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px;
+    background: #c00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
+}
+
+button:hover {
+    background: #900;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #222;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+  z-index: 10;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.login-section {
+    max-width: 400px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 16px rgba(0,0,0,0.08);
+    margin-top: 20px;
+}
+
+.login-section h2 {
+    margin-bottom: 20px;
+    color: #c00;
+    text-align: center;
+}
+
+.login-section form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.login-section label {
+    margin: 5px 0;
+}
+
+.login-section input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.login-section button {
+    padding: 10px;
+    background: #c00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
+}
+
+.login-section button:hover {
+    background: #900;
+}
+
+.login-section p {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+.login-section a {
+    color: #e10600;
+    text-decoration: none;
+}
+
+.login-section a:hover {
+    text-decoration: underline;
+}
+
+.dark-mode {
+    background: #111;
+    color: #fff;
+}
+
+.dark-mode .form-section {
+    background: rgba(50, 50, 50, 0.95);
+    color: #fff;
+}
+
+.dark-mode .form-section h2 {
+    color: #ff6666;
+}
+
+.dark-mode .form-section label {
+    color: #ddd;
+}
+
+.dark-mode .form-section input {
+    background: #222;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+.dark-mode .form-section p {
+    color: #ddd;
+}
+
+.dark-mode .form-section a {
+    color: #ff6666;
+}
+
+.dark-mode .login-section {
+    background: rgba(50, 50, 50, 0.95);
+    color: #fff;
+}
+
+.dark-mode .login-section h2 {
+    color: #ff6666;
+}
+
+.dark-mode .login-section label {
+    color: #ddd;
+}
+
+.dark-mode .login-section input {
+    background: #222;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+.dark-mode .login-section p {
+    color: #ddd;
+}
+
+.dark-mode .login-section a {
+    color: #ff6666;
+}
+
+.light-mode {
+    background: #fff;
+    color: #000;
+}
+
+.light-mode .form-section {
+    background: rgba(255, 255, 255, 0.95);
+    color: #000;
+}
+
+.light-mode .form-section h2 {
+    color: #c00;
+}
+
+.light-mode .form-section label {
+    color: #333;
+}
+
+.light-mode .form-section input {
+    background: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+}
+
+.light-mode .form-section p {
+    color: #333;
+}
+
+.light-mode .form-section a {
+    color: #e10600;
+}
+
+.light-mode .login-section {
+    background: rgba(255, 255, 255, 0.95);
+    color: #000;
+}
+
+.light-mode .login-section h2 {
+    color: #c00;
+}
+
+.light-mode .login-section label {
+    color: #333;
+}
+
+.light-mode .login-section input {
+    background: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+}
+
+.light-mode .login-section p {
+    color: #333;
+}
+
+.light-mode .login-section a {
+    color: #e10600;
+}
+
+#theme-toggle {
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 25px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.profile-section, .membership-section, .actions-section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.profile-pic {
+    width: 120px;
+    border-radius: 120px;
+    margin-bottom: 50%;
+}
+
+.qr{
+    width: 150px;
+}
+
+.paid {
+    color: green;
+    font-weight: bold;
+}
+
+.unpaid {
+    color: red;
+    font-weight: bold;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 0;
+    color: var(--primary);
+}
+
+.button-user {
+    padding: 10px 15px;
+    margin-top: 10px;
+    border: none;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--primary-dark);
+}
+
+.action-item {
+    margin-bottom: 15px;
+}
+
+.action-item button {
+    width: 100%;
+    text-align: left;
+}
+.action-item button:hover {
+    background: var(--primary-dark);
+}
+
+.cancel-btn{
+    background: var(--danger);
+}
